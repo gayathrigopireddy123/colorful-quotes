@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colorful Quotes</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: #fff;
+      text-align: center;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div id="quote">"Keep pushing forward 🚀"</div>
+  <script>
+    const quotes = [
+      "Stay positive 💪",
+      "You can do it 💯",
+      "Never give up 💥",
+      "Dream big 🌈",
+      "One step at a time 👣"
+    ];
+    setInterval(() => {
+      document.getElementById("quote").innerText = 
+        quotes[Math.floor(Math.random() * quotes.length)];
+    }, 3000);
+  </script>
+</body>
+</html>
+
