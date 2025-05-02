@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colorful-quotes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quotes
+  template:
+    metadata:
+      labels:
+        app: quotes
+    spec:
+      containers:
+      - name: quotes
+        image: colorful-quotes:latest >/colorful-quotes
+        ports:
+        - containerPort: 80
